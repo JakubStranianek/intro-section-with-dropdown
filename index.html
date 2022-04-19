@@ -1,16 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-    </style> 
+      @import url("https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+    </style>
 
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+    <link rel="stylesheet" href="src/styles/style.css" />
+
+    <title>Intro section with dropdown navigation</title>
+  </head>
+  <body>
+    <header>
+      <div class="flex">
+        <img src="./src/assets/logo.svg" alt="logo" />
+        <nav>
+          <ul>
+            <li>
+              <div class="dropdown">
+                <button class="dropbtn">Features</button>
+                <div class="dropdown-content">
+                  <a href="#">Todo List</a>
+                  <a href="#">Calendar</a>
+                  <a href="#">Reminders</a>
+                  <a href="#">Planning</a>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="dropdown">
+                <button class="dropbtn">Company</button>
+                <div class="dropdown-content">
+                  <a href="#">History</a>
+                  <a href="#">Our Team</a>
+                  <a href="#">Blog</a>
+                </div>
+              </div>
+            </li>
+            <li><a href="#">Carrers</a></li>
+            <li><a href="#">About</a></li>
+          </ul>
+        </nav>
+
+        <img src="./src/assets/icon-menu.svg" class="menu" alt="menu">
+      </div>
+
+      <div class="login">
+        <a href="#">Login</a>
+        <a href="#">Register</a>
+      </div>
+    </header>
+
+    <main>
+        <section class="textSection">
+            <h2>Make remote work</h2>
+            <p>Get your team in sync, no matter your location. Streamline processes, create team rituals, and watch productivity soar.</p>
+            <button>Learn more</button>
+
+            <div class="companyLogos">
+                <img src="./src/assets/client-databiz.svg" alt="databiz">
+                <img src="./src/assets/client-audiophile.svg" alt="audio">
+                <img src="./src/assets/client-meet.svg" alt="meet">
+                <img src="./src/assets/client-maker.svg" alt="maker">
+            </div>
+        </section>
+
+        <section class="imageSection">
+        </section>
+    </main>
+  </body>
 </html>

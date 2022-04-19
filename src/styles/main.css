@@ -1,0 +1,125 @@
+main {
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap-reverse;
+      flex-wrap: wrap-reverse;
+}
+
+.textSection {
+  margin-top: 200px;
+  width: 520px;
+}
+
+.textSection h2 {
+  font-size: 80px;
+  font-weight: bold;
+  line-height: 80px;
+  letter-spacing: -1.11px;
+  color: black;
+}
+
+.textSection p {
+  color: #686868;
+  font-size: 18px;
+  font-weight: normal;
+  line-height: 28px;
+  margin-top: 48px;
+}
+
+.textSection button {
+  border: none;
+  color: white;
+  background-color: black;
+  width: 163px;
+  height: 56px;
+  border-radius: 15px;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 28px;
+  letter-spacing: -0.25px;
+  margin-top: 51px;
+}
+
+.textSection .companyLogos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 100px;
+}
+
+.textSection .companyLogos img {
+  height: 20px;
+}
+
+.imageSection {
+  width: 480px;
+  height: 640px;
+  margin-top: 80px;
+  background: url("../assets/image-hero-desktop.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+/* Extra big screen devices (1200px and above) */
+@media only screen and (max-width: 1500px) {
+  main {
+    width: 90%;
+  }
+}
+
+/* Big screen devices (889px and above) */
+@media only screen and (max-width: 1120px) {
+  main {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding-bottom: 60px;
+  }
+  main h2, main p {
+    text-align: center;
+  }
+  main .textSection button {
+    width: 100%;
+  }
+}
+
+/* Small screen devices (600px and above) */
+@media only screen and (max-width: 600px) {
+  main {
+    width: 100%;
+  }
+  .textSection {
+    margin-top: 90px;
+    width: 75%;
+  }
+  .textSection h2 {
+    font-size: 36px;
+    font-weight: bold;
+    line-height: 42px;
+    letter-spacing: -0.5px;
+  }
+  .textSection p {
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 28px;
+    letter-spacing: 0;
+  }
+  .imageSection {
+    width: 100%;
+    height: 280px;
+    background: url("../assets/image-hero-mobile.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+/*# sourceMappingURL=main.css.map */

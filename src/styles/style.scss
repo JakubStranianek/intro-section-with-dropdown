@@ -1,6 +1,9 @@
 @import "./colors.scss";
 @import "./fonts.scss";
+@import "./header.scss";
+@import "./main.scss";
 
 * {
-    font-family: 'Epilogue', sans-serif;
+  font-family: "Epilogue", sans-serif;
+  margin: 0;
 }

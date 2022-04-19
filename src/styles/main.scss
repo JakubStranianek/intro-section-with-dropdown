@@ -1,0 +1,112 @@
+@import "./colors.scss";
+@import "./fonts.scss";
+
+main {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap-reverse;
+}
+
+.textSection {
+    margin-top: 200px;
+    width: 520px;
+    
+    h2 {
+        @include headingL;
+        color: black;
+    }
+
+    p {
+        color: $mediumGrey;
+        @include headingM;
+        margin-top: 48px;
+    }
+
+    button {
+        border: none;
+        color: white; 
+        background-color: black;
+        width: 163px;
+        height: 56px;
+        border-radius: 15px;
+        @include button;
+        margin-top: 51px;
+    }
+
+    .companyLogos {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 100px;
+        
+        img {
+            height: 20px;
+        }
+    }
+}
+
+.imageSection {
+    width: 480px;
+    height: 640px;
+    margin-top: 80px;
+    background: url("../assets/image-hero-desktop.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+ 
+/* Extra big screen devices (1200px and above) */
+@media only screen and (max-width: 1500px) {
+    main {
+        width: 90%;
+    }
+}
+
+
+/* Big screen devices (889px and above) */
+@media only screen and (max-width: 1120px) {
+    main {
+        justify-content: center;
+        padding-bottom: 60px;
+
+        h2, p {
+            text-align: center;
+        }
+
+        .textSection {
+            button {
+                width: 100%;
+            }
+        }
+    }
+}
+
+/* Small screen devices (600px and above) */
+@media only screen and (max-width: 600px) {
+    main {
+        width: 100%;
+    }
+    
+    .textSection {
+        margin-top: 90px;
+        width: 75%;
+
+        h2 {
+            @include headingResponsive;
+        }
+
+        p {
+            @include paragraphResponsive;
+        }
+    }
+
+    .imageSection {
+        width: 100%;
+        height: 280px;
+        background: url("../assets/image-hero-mobile.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+}

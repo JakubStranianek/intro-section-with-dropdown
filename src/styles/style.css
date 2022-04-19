@@ -1,0 +1,322 @@
+header {
+  margin-top: 32px;
+  width: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+header .flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header img {
+  width: 83px;
+  height: 26px;
+}
+
+header nav ul li {
+  list-style: none;
+  display: inline;
+  margin-left: 40px;
+}
+
+header nav ul li a {
+  color: #686868;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 16px;
+  text-decoration: none;
+}
+
+header nav ul li li:nth-child(1):after,
+header nav ul li li:nth-child(2):after {
+  content: url("../assets/icon-arrow-down.svg");
+  margin-left: 9px;
+}
+
+header .menu {
+  width: 32px;
+  height: 18px;
+  display: none;
+}
+
+.login a {
+  text-decoration: none;
+  color: #686868;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 16px;
+}
+
+.login a:nth-child(2) {
+  border: 1px solid #686868;
+  border-radius: 14px;
+  padding: 13px 23px;
+  margin-left: 40px;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown .dropbtn {
+  color: #686868;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 16px;
+  text-decoration: none;
+  border: none;
+  background-color: white;
+}
+
+.dropdown .dropbtn::after {
+  content: url("../assets/icon-arrow-down.svg");
+  margin-left: 9px;
+}
+
+.dropdown .dropbtn:hover::after {
+  content: url("../assets/icon-arrow-up.svg");
+  margin-left: 9px;
+  -webkit-transition: opacity 1.2s ease-out;
+  transition: opacity 1.2s ease-out;
+}
+
+.dropdown .dropdown-content {
+  display: none;
+  position: absolute;
+  right: 0;
+  margin-top: 20px;
+  border-radius: 14px;
+  background-color: #FFFFFF;
+  min-width: 153px;
+  height: 160px;
+  -webkit-box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown .dropdown-content a {
+  color: #686868;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 16px;
+  display: block;
+}
+
+.dropdown .dropdown-content a:nth-child(1)::before {
+  content: url("../assets/icon-todo.svg");
+  margin-right: 15px;
+}
+
+.dropdown .dropdown-content a:nth-child(2)::before {
+  content: url("../assets/icon-calendar.svg");
+  margin-right: 15px;
+}
+
+.dropdown .dropdown-content a:nth-child(3)::before {
+  content: url("../assets/icon-reminders.svg");
+  margin-right: 15px;
+}
+
+.dropdown .dropdown-content a:nth-child(4)::before {
+  content: url("../assets/icon-planning.svg");
+  margin-right: 15px;
+}
+
+.dropdown:hover .dropdown-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.flex
+> nav:nth-child(2)
+> ul:nth-child(1)
+> li:nth-child(2)
+> div:nth-child(1)
+> div:nth-child(2) {
+  left: 0;
+  min-width: 116px;
+  height: 128px;
+}
+
+.flex
+> nav:nth-child(2)
+> ul:nth-child(1)
+> li:nth-child(2)
+> div:nth-child(1)
+> div:nth-child(2) a::before {
+  content: none;
+}
+
+@media only screen and (max-width: 1080px) {
+  nav, .login {
+    display: none;
+  }
+  .flex {
+    width: 100%;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .flex .menu {
+    display: block;
+  }
+}
+
+main {
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap-reverse;
+      flex-wrap: wrap-reverse;
+}
+
+.textSection {
+  margin-top: 200px;
+  width: 520px;
+}
+
+.textSection h2 {
+  font-size: 80px;
+  font-weight: bold;
+  line-height: 80px;
+  letter-spacing: -1.11px;
+  color: black;
+}
+
+.textSection p {
+  color: #686868;
+  font-size: 18px;
+  font-weight: normal;
+  line-height: 28px;
+  margin-top: 48px;
+}
+
+.textSection button {
+  border: none;
+  color: white;
+  background-color: black;
+  width: 163px;
+  height: 56px;
+  border-radius: 15px;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 28px;
+  letter-spacing: -0.25px;
+  margin-top: 51px;
+}
+
+.textSection .companyLogos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 100px;
+}
+
+.textSection .companyLogos img {
+  height: 20px;
+}
+
+.imageSection {
+  width: 480px;
+  height: 640px;
+  margin-top: 80px;
+  background: url("../assets/image-hero-desktop.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+/* Extra big screen devices (1200px and above) */
+@media only screen and (max-width: 1500px) {
+  main {
+    width: 90%;
+  }
+}
+
+/* Big screen devices (889px and above) */
+@media only screen and (max-width: 1120px) {
+  main {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding-bottom: 60px;
+  }
+  main h2, main p {
+    text-align: center;
+  }
+  main .textSection button {
+    width: 100%;
+  }
+}
+
+/* Small screen devices (600px and above) */
+@media only screen and (max-width: 600px) {
+  main {
+    width: 100%;
+  }
+  .textSection {
+    margin-top: 90px;
+    width: 75%;
+  }
+  .textSection h2 {
+    font-size: 36px;
+    font-weight: bold;
+    line-height: 42px;
+    letter-spacing: -0.5px;
+  }
+  .textSection p {
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 28px;
+    letter-spacing: 0;
+  }
+  .imageSection {
+    width: 100%;
+    height: 280px;
+    background: url("../assets/image-hero-mobile.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+
+* {
+  font-family: "Epilogue", sans-serif;
+  margin: 0;
+}
+/*# sourceMappingURL=style.css.map */
