@@ -64,6 +64,25 @@ header {
   }
 }
 
+.responsiveNavbar {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+
+  .navbar {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 60%;
+    height: 100%;
+    background-color: $pureWhite;
+  }
+}
+
 .dropdown {
   position: relative;
   display: inline-block;
@@ -76,6 +95,7 @@ header {
     text-decoration: none;
     border: none;
     background-color: white;
+    padding: 0;
   }
 
   .dropbtn::after {
@@ -83,14 +103,7 @@ header {
     margin-left: 9px;
   }
 
-  .dropbtn:hover::after {
-    content: url("../assets/icon-arrow-up.svg");
-    margin-left: 9px;
-    transition: opacity 1.2s ease-out;
-  }
-
   .dropdown-content {
-    display: none;
     position: absolute;
     right: 0;
     margin-top: 20px;
@@ -127,11 +140,12 @@ header {
   }
 }
 
-.dropdown:hover .dropdown-content {
-  display: flex;
+.dropdown .dropdown-content {
+  display: none;
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
+  transition: opacity 0.6s linear;
 }
 
 .flex
@@ -150,17 +164,40 @@ header {
 }
 
 @media only screen and (max-width: 1080px) {
-  nav,
-  .login {
-    display: none;
-  }
-
   .flex {
     width: 100%;
     justify-content: space-between;
 
+    nav {
+      display: none;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 60%;
+        height: 100%;
+        background-color: $pureWhite;
+      
+      ul {
+        margin-top: 115px;
+      }
+
+      li{
+         display: block;
+
+         a {
+           font-size: 16px;
+           line-height: 26px;
+         }
+      }
+    }
+
     .menu {
       display: block;
+      z-index: 99;
     }
+  }
+
+  .login {
+    display: none;
   }
 }

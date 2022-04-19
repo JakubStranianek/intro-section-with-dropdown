@@ -69,6 +69,25 @@ header .menu {
   margin-left: 40px;
 }
 
+.responsiveNavbar {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.responsiveNavbar .navbar {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 60%;
+  height: 100%;
+  background-color: #FFFFFF;
+}
+
 .dropdown {
   position: relative;
   display: inline-block;
@@ -82,6 +101,7 @@ header .menu {
   text-decoration: none;
   border: none;
   background-color: white;
+  padding: 0;
 }
 
 .dropdown .dropbtn::after {
@@ -89,15 +109,7 @@ header .menu {
   margin-left: 9px;
 }
 
-.dropdown .dropbtn:hover::after {
-  content: url("../assets/icon-arrow-up.svg");
-  margin-left: 9px;
-  -webkit-transition: opacity 1.2s ease-out;
-  transition: opacity 1.2s ease-out;
-}
-
 .dropdown .dropdown-content {
-  display: none;
   position: absolute;
   right: 0;
   margin-top: 20px;
@@ -139,10 +151,8 @@ header .menu {
   margin-right: 15px;
 }
 
-.dropdown:hover .dropdown-content {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+.dropdown .dropdown-content {
+  display: none;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -153,6 +163,8 @@ header .menu {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+  -webkit-transition: opacity 0.6s linear;
+  transition: opacity 0.6s linear;
 }
 
 .flex
@@ -176,17 +188,37 @@ header .menu {
 }
 
 @media only screen and (max-width: 1080px) {
-  nav, .login {
-    display: none;
-  }
   .flex {
     width: 100%;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
   }
+  .flex nav {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 60%;
+    height: 100%;
+    background-color: #FFFFFF;
+  }
+  .flex nav ul {
+    margin-top: 115px;
+  }
+  .flex nav li {
+    display: block;
+  }
+  .flex nav li a {
+    font-size: 16px;
+    line-height: 26px;
+  }
   .flex .menu {
     display: block;
+    z-index: 99;
+  }
+  .login {
+    display: none;
   }
 }
 
@@ -318,5 +350,13 @@ main {
 * {
   font-family: "Epilogue", sans-serif;
   margin: 0;
+}
+
+.bodyBg {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.overflow {
+  overflow-y: hidden;
 }
 /*# sourceMappingURL=style.css.map */
