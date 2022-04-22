@@ -33,6 +33,10 @@ header {
           text-decoration: none;
         }
 
+        a:hover {
+          color: black;
+        }
+
         li:nth-child(1):after,
         li:nth-child(2):after {
           content: url("../assets/icon-arrow-down.svg");
@@ -56,11 +60,20 @@ header {
     @include headingS;
   }
 
+  a:hover {
+    color: black;
+  }
+
   a:nth-child(2) {
     border: 1px solid $mediumGrey;
     border-radius: 14px;
     padding: 13px 23px;
     margin-left: 40px;
+  }
+
+  a:nth-child(2):hover {
+    color: black;
+    border: 1px solid black;
   }
 }
 
@@ -98,10 +111,16 @@ header {
     padding: 0;
   }
 
+  .dropbtn:hover {
+    color: black;
+    cursor: pointer;
+  }
+  
   .dropbtn::after {
     content: url("../assets/icon-arrow-down.svg");
     margin-left: 9px;
   }
+
 
   .dropdown-content {
     position: absolute;
@@ -183,10 +202,10 @@ header {
 
       li{
          display: block;
+        margin-top: 16px;
 
          a {
            font-size: 16px;
-           line-height: 26px;
          }
       }
     }
@@ -199,5 +218,18 @@ header {
 
   .login {
     display: none;
+  }
+
+  .dropdown .dropbtn {
+    font-size: 16px;
+  }
+
+  .dropdown .dropdown-content {
+    align-items: flex-start;
+    background-color: rgba(0, 0, 0, 0);
+    box-shadow: none;
+    left: 0;
+    margin-top: 0;
+    margin-left: 20px;
   }
 }

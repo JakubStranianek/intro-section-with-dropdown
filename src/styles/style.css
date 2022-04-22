@@ -42,6 +42,10 @@ header nav ul li a {
   text-decoration: none;
 }
 
+header nav ul li a:hover {
+  color: black;
+}
+
 header nav ul li li:nth-child(1):after,
 header nav ul li li:nth-child(2):after {
   content: url("../assets/icon-arrow-down.svg");
@@ -62,11 +66,20 @@ header .menu {
   line-height: 16px;
 }
 
+.login a:hover {
+  color: black;
+}
+
 .login a:nth-child(2) {
   border: 1px solid #686868;
   border-radius: 14px;
   padding: 13px 23px;
   margin-left: 40px;
+}
+
+.login a:nth-child(2):hover {
+  color: black;
+  border: 1px solid black;
 }
 
 .responsiveNavbar {
@@ -102,6 +115,11 @@ header .menu {
   border: none;
   background-color: white;
   padding: 0;
+}
+
+.dropdown .dropbtn:hover {
+  color: black;
+  cursor: pointer;
 }
 
 .dropdown .dropbtn::after {
@@ -208,10 +226,10 @@ header .menu {
   }
   .flex nav li {
     display: block;
+    margin-top: 16px;
   }
   .flex nav li a {
     font-size: 16px;
-    line-height: 26px;
   }
   .flex .menu {
     display: block;
@@ -219,6 +237,20 @@ header .menu {
   }
   .login {
     display: none;
+  }
+  .dropdown .dropbtn {
+    font-size: 16px;
+  }
+  .dropdown .dropdown-content {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    background-color: rgba(0, 0, 0, 0);
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    left: 0;
+    margin-top: 0;
+    margin-left: 20px;
   }
 }
 
@@ -269,6 +301,13 @@ main {
   line-height: 28px;
   letter-spacing: -0.25px;
   margin-top: 51px;
+}
+
+.textSection button:hover {
+  background-color: white;
+  border: 1px solid black;
+  color: black;
+  cursor: pointer;
 }
 
 .textSection .companyLogos {

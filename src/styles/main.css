@@ -47,6 +47,13 @@ main {
   margin-top: 51px;
 }
 
+.textSection button:hover {
+  background-color: white;
+  border: 1px solid black;
+  color: black;
+  cursor: pointer;
+}
+
 .textSection .companyLogos {
   display: -webkit-box;
   display: -ms-flexbox;
